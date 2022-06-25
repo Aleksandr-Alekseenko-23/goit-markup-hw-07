@@ -67,8 +67,8 @@
     &__input {
     padding-left: 42px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover+&__icon,
-    &:focus+&__icon {
+    &:hover + .username__icon,
+    &:focus + .username__icon {
     fill: #2196F3;
 }
 
@@ -84,65 +84,68 @@
 
 .phone {
     position: relative;
-    &__input {
+     
+}
+
+    .phone__input {
     padding-left: 42px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover+&__icon,
-    .phone__input:focus+.phone__icon {
-    fill: #2196F3;
-}
 
     &:hover,
     &:focus {
-    border-color: #2196F3;
-}
-}
+        border-color: #2196F3;
+    }
+    }
 
-    &__icon {
+    .phone__icon {
     position: absolute;
     top: 50%;
     left: 12px;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .phone__input:hover + &,
+    .phone__input:focus + & {
+        fill: #2196F3;
+    }
 }
 
-}
+
 
 
 .mail {
     position: relative;
-    &__input {
+    
+}
+
+    .mail__input {
     padding-left: 42px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover+&__icon,
-    &:focus+&__icon {
-    fill: #2196F3;
-}
 
     &:hover,
     &:focus {
-    border-color: #2196F3;
-}
-}
+        border-color: #2196F3;
+    }
+    }
 
-    &__icon {
+    .mail__icon {
     position: absolute;
     top: 50%;
     left: 12px;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .mail__input:hover+&,
+    .mail__input:focus+& {
+        fill: #2196F3;
+    }
 }
-}
-
-
-
-
-
 
 
 .feedback {
     margin-bottom: 20px;
-    &__input {
+}
+    .feedback__input {
     color: #000;
     height: 120px;
     width: 448px;
@@ -156,11 +159,12 @@
     }
 }
 
-}
+
 
 .checkbox {
     margin-bottom: 30px;
-    &__icon {
+}
+    .checkbox__icon {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -168,9 +172,20 @@
     border: 1px solid #212121;
     background-color: #fff;
     border-radius: 2px;
-}
 
-    &__label {
+    .checkbox__input:checked+& {
+        background-color: var(--second-link-color);
+        border-color: var(--second-link-color);
+        background-image: url(../images/Vector.svg);
+        background-size: contain;
+    }
+    
+    .checkbox__input:focus~& {
+        border-color: var(--second-link-color);
+    }
+    }
+
+    .checkbox__label {
     display: inline-block;
 
     font-size: var(--first-font-size);
@@ -180,24 +195,14 @@
     color: var(--first-text-color);
 }
 
-    &__input {
+    .checkbox__input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     position: absolute;
-
-    &:checked+&__icon {
-        background-color: var(--second-link-color);
-        border-color: var(--second-link-color);
-        background-image: url(../images/Vector.svg);
-        background-size: contain;
-    }
-    
-    &:focus~&__icon {
-        border-color: var(--second-link-color);
-    }
 }
-    &__link {
+   
+    .checkbox__link {
     outline: none;
     text-decoration: none;
     border-bottom: 1px solid var(--second-link-color);
@@ -208,18 +213,12 @@
     color: var(--second-link-color);
 
 }
-}
-
-
-
-
-
 
 .button-send-modal {
     margin-left: auto;
     margin-right: auto;
-
-    &__button {
+}
+    .button-send-modal__button {
         display: block;
     
     
@@ -238,5 +237,5 @@
         cursor: pointer;
     
     }
-}
+
 
