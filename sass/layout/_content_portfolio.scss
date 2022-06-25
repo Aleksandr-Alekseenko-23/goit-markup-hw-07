@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
 
-
-    &__items {
+    .content-portfolio__items {
     margin-right: 30px;
     margin-bottom: 30px;
 
@@ -17,42 +17,30 @@
     &:nth-last-child(-n + 3) {
         margin-bottom: 0;
     }
-}
+    }
 
-    &__link {
+    .content-portfolio__link {
     display: block;
 
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
-    &:hover &__overlay-box,
-    &:focus &__overlay-box {
-    transform: translateY(0);
-
-}
-
     &:hover,
     &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+    }
 
-}
+    }
 
-    &__box {
+    .content-portfolio__box {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-
-    &:hover &__overlay-box,
-    &:focus &__overlay-box {
-        transform: translateY(0);
-    
     }
-}
 
-    &__overlay-box {
+    .content-portfolio__overlay-box {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -68,9 +56,20 @@
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .content-portfolio__link:hover &,
+    .content-portfolio__link:focus & {
+        transform: translateY(0);
+    
+    }
+
+    .content-portfolio__box:hover &,
+    .content-portfolio__box:focus & {
+        transform: translateY(0);
+    }
 }
 
-    &__overlay-text {
+    .content-portfolio__overlay-text {
     color: #FFFFFF;
 
     padding: 63px 24px;
@@ -79,7 +78,7 @@
     font-size: var(--third-font-size);
     line-height: 1.56
 }
-    &__text {
+    .content-portfolio__text {
     color: var(--first-text-color);
     font-size: var(--second-font-size);
     line-height: 1.88;
@@ -87,11 +86,11 @@
     margin-top: 0;
     margin-bottom: 0;
 }
-    &__wrapper {
+    .content-portfolio__wrapper {
     padding: 20px 24px;
     border-bottom: 1px solid rgba(238, 238, 238, 1);
     border-left: 1px solid rgba(238, 238, 238, 1);
     border-right: 1px solid rgba(238, 238, 238, 1);
 }
 
-}
+
