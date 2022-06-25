@@ -690,12 +690,6 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-networks__link:hover .social-networks__link__icon,
-.social-networks__link:focus .social-networks__link__icon {
-  background-color: var(--second-link-color);
-  fill: var(--first-background-color);
-}
-
 .social-networks__link:hover, .social-networks__link:focus {
   background-color: var(--second-link-color);
 }
@@ -707,6 +701,12 @@ body {
   transition-property: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-networks__link:hover .social-networks__icon,
+.social-networks__link:focus .social-networks__icon {
+  background-color: var(--second-link-color);
+  fill: var(--first-background-color);
 }
 
 .social-networks__icon-fill {
